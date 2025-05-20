@@ -25,14 +25,14 @@ except Exception as e:
 # 配置参数
 LLM_NAME = 'Qwen/Qwen-7B'  # Changed to QWEN 7B model
 SAVE_DIR = '/data2/zhangtiant/DeepRouter/saved'
-BATCH_SIZE = 16
-MAX_LENGTH = 128
-SEMANTIC_DIM = 4096  # QWEN-7B has hidden size of 4096
+BATCH_SIZE = 128
+MAX_LENGTH = 1024
+SEMANTIC_DIM = 768 # QWEN-7B has hidden size of 768
 SYNTACTIC_DIM = 128
 FUSE_DIM = 256
 NUM_CLASSES = 5
 LR = 2e-5
-EPOCHS = 5
+EPOCHS = 10
 DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 # 自定义数据集（支持分批加载图数据）
